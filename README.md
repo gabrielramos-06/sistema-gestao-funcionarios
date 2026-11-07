@@ -31,5 +31,5 @@ Projeto de Aplicação para a disciplina de **Programação Orientada a Objetos 
 ```bash
 mvn clean compile
 
-## Como executar
+Como executar:
 mvn exec:java -Dexec.mainClass="br.com.empresa.Main"
