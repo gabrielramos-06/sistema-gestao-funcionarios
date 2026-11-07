@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS funcionarios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    salario_base DECIMAL(10, 2) NOT NULL,
+    cargo VARCHAR(30) NOT NULL,
+    detalhe_especifico VARCHAR(100) NOT NULL
+);
