@@ -15,7 +15,6 @@
     </properties>
 
     <dependencies>
-        <!-- Driver JDBC para SQLite (cria o banco automaticamente em arquivo local) -->
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
