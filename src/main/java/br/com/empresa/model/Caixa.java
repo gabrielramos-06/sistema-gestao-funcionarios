@@ -15,7 +15,6 @@ public class Caixa extends Funcionario {
 
     @Override
     public double calcularBonificacao() {
-        // Regra polimórfica do Caixa: 10% de bônus sobre o salário base
         return getSalarioBase() * 0.10;
     }
 
