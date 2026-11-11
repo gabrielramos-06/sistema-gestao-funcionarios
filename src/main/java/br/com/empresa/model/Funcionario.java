@@ -16,16 +16,16 @@ public abstract class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    // Método abstrato que obriga as subclasses a implementarem o Polimorfismo
+    
     public abstract double calcularBonificacao();
 
-    // Retorna o cargo do funcionário para persistência e exibição
+    
     public abstract String getCargo();
 
-    // Retorna o atributo específico de cada subclasse
+    
     public abstract String getDetalheEspecifico();
 
-    // Método concreto que utiliza o método polimórfico calcularBonificacao()
+    
     public double calcularSalarioFinal() {
         return this.salarioBase + calcularBonificacao();
     }
