@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FuncionarioDAO {
-    // URL de conexão do SQLite (cria o arquivo empresa.db na raiz do projeto)
     private static final String URL = "jdbc:sqlite:empresa.db";
 
     public FuncionarioDAO() {
@@ -38,7 +37,7 @@ public class FuncionarioDAO {
         }
     }
 
-    // 1. CADASTRAR FUNCIONÁRIO (INSERT)
+
     public void cadastrar(Funcionario f) {
         String sql = "INSERT INTO funcionarios (nome, salario_base, cargo, detalhe_especifico) VALUES (?, ?, ?, ?)";
 
@@ -62,7 +61,7 @@ public class FuncionarioDAO {
         }
     }
 
-    // 2. LISTAR FUNCIONÁRIOS (SELECT + POLIMORFISMO)
+    
     public List<Funcionario> listarTodos() {
         List<Funcionario> lista = new ArrayList<>();
         String sql = "SELECT * FROM funcionarios";
@@ -78,7 +77,7 @@ public class FuncionarioDAO {
                 String cargo = rs.getString("cargo");
                 String detalhe = rs.getString("detalhe_especifico");
 
-                // Instancia a subclasse correta aplicando Polimorfismo na lista de Funcionario
+               
                 if ("GERENTE".equalsIgnoreCase(cargo)) {
                     lista.add(new Gerente(id, nome, salarioBase, detalhe));
                 } else if ("CAIXA".equalsIgnoreCase(cargo)) {
@@ -91,7 +90,7 @@ public class FuncionarioDAO {
         return lista;
     }
 
-    // 3. EXCLUIR FUNCIONÁRIO (DELETE)
+    
     public boolean excluir(int id) {
         String sql = "DELETE FROM funcionarios WHERE id = ?";
         try (Connection conn = conectar();
