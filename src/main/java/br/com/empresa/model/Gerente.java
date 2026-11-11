@@ -15,7 +15,7 @@ public class Gerente extends Funcionario {
 
     @Override
     public double calcularBonificacao() {
-        // Regra polimórfica do Gerente: 20% de bônus sobre o salário base
+        
         return getSalarioBase() * 0.20;
     }
 
