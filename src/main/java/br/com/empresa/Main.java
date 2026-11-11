@@ -65,7 +65,6 @@ public class Main {
                     } else {
                         double totalFolha = 0;
                         for (Funcionario f : funcionarios) {
-                            // Chamada polimórfica: cada objeto calcula seu próprio bônus e salário final
                             System.out.println(f);
                             totalFolha += f.calcularSalarioFinal();
                         }
